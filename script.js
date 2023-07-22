@@ -32,15 +32,27 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
-  let decodedArr = []; // Your Result goes here
-  // Only change code below this line
-
-  return; //return decodedArr
-}
+	/* let resStr = "" */
+  let arr = encodedStr.split('')
+ 
+  let decodedArr = [];// Your Result goes here
+  
+  arr.forEach((val, index)=>{
+    
+    if(val ===" "){
+    	decodedArr.push(val)
+    }
+    else{
+    	decodedArr.push(lookup[val])
+    }
+  })
+  
+  return decodedArr.join("")
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(rot13("SERR YBIR? NPPVBWBO"));
+// FREE LOVE ACCIOJOB
+console.log(rot13("SERR YBIR? NPPVBWBO"));
 
 // Do not change this line
 window.rot13 = rot13;
